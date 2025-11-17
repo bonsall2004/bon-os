@@ -1,0 +1,11 @@
+
+#
+# Debugging
+#
+
+#
+# Kernel Details
+#
+CONFIG_KERNEL_NAME="BonOS"
+# end of Kernel Details
+# end of Debugging

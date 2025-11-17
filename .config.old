@@ -1,0 +1,23 @@
+#
+# Automatically generated file. DO NOT EDIT.
+# Project Configuration
+#
+
+#
+# Debugging
+#
+
+#
+# Kernel Versioning
+#
+CONFIG_KERNEL_NAME="BonOS"
+CONFIG_KERNEL_VERSION="@KERNEL_VERSION@"
+# end of Kernel Versioning
+
+#
+# Assertions
+#
+CONFIG_ASSERTIONS_ENABLED=y
+CONFIG_ASSERTIONS_HALT_ON_FAIL=y
+# end of Assertions
+# end of Debugging

@@ -1,0 +1,8 @@
+menu "Debugging"
+    menu "Kernel Details"
+        config KERNEL_NAME
+            string "OS Name"
+            default "BonOS"
+
+    endmenu
+endmenu

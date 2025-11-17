@@ -1,0 +1,8 @@
+./binaries
+./intermediate
+./experiments
+*.img
+
+.idea
+*.hdd
+*.iso
