@@ -1,6 +1,0 @@
-BITS 64
-DEFAULT REL
-
-extern KERN_PANIC
-
-SECTION .text

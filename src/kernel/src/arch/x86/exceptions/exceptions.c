@@ -1,15 +1,17 @@
-//
-// Created by bonsall2004 on 16/11/2025.
-//
-#include "exceptions.h"
-#include "../idt/idt.h"
-#include <stdint.h>
-#include <stddef.h>
-#include <serial/serial.h>
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/arch/x86/exceptions/exceptions.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 
-void halt(void) {
-  asm volatile ("hlt");
-}
+#include "exceptions.h"
+#include <serial/serial.h>
+#include <stddef.h>
+#include <stdint.h>
+#include "../idt/idt.h"
+
+void halt(void) { asm volatile("hlt"); }
 
 #define MAX_EXCEPTIONS 32
 
@@ -40,24 +42,17 @@ void exception_common(uint64_t vector, uint64_t err, uint64_t *stack_frame) {
   }
 
 
-  serial_printf(
-    "=== Exception ===\n"
-    "Vector: 0x%X\n"
-    "Error code: 0x%X\n"
-    "RIP: 0x%X\n"
-    "CS: 0x%X\n"
-    "RFLAGS: 0x%X\n"
-    "RSP: 0x%X\n"
-    "SS: 0x%X\n"
-    "Halting.\n",
-    (unsigned int) vector,
-    (unsigned int) err,
-    (unsigned int) frame.rip,
-    (unsigned int) frame.cs,
-    (unsigned int) frame.rflags,
-    (unsigned int) frame.rsp,
-    (unsigned int) frame.ss
-  );
+  serial_printf("=== Exception ===\n"
+                "Vector: 0x%X\n"
+                "Error code: 0x%X\n"
+                "RIP: 0x%X\n"
+                "CS: 0x%X\n"
+                "RFLAGS: 0x%X\n"
+                "RSP: 0x%X\n"
+                "SS: 0x%X\n"
+                "Halting.\n",
+                (unsigned int) vector, (unsigned int) err, (unsigned int) frame.rip, (unsigned int) frame.cs,
+                (unsigned int) frame.rflags, (unsigned int) frame.rsp, (unsigned int) frame.ss);
 
   halt();
 }

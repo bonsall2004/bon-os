@@ -1,3 +1,10 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/framebuffer/logging.h
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
+
 #pragma once
 #include <limine.h>
 #include <stddef.h>

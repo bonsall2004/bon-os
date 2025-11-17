@@ -1,3 +1,10 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/framebuffer/logging.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
+
 #include "logging.h"
 #include <font.h>
 #include <kformat.h>

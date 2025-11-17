@@ -1,3 +1,11 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/arch/x86/io.h
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
+
+#pragma once
 #include <stdint.h>
 
 uint8_t inb(uint16_t port);

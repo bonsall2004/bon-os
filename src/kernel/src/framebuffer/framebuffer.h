@@ -1,3 +1,9 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/framebuffer/framebuffer.h
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 #pragma once
 #include <stddef.h>
 #include <stdint.h>

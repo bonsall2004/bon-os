@@ -1,6 +1,10 @@
-//
-// Created by bonsall2004 on 16/11/2025.
-//
+/*******************************************************************************
+* Project: BonOS
+ * File: src/libc/src/string/strcmp.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
+
 #include <string.h>
 
 int strcmp(const char* a, const char* b) {

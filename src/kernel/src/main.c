@@ -1,3 +1,9 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/main.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 #include <arch/x86/exceptions/exceptions.h>
 #include <arch/x86/gdt/gdt.h>
 #include <arch/x86/idt/idt.h>
@@ -18,7 +24,6 @@ static void hcf(void) {
     asm("hlt");
   }
 }
-
 
 void kmain(void) {
   serial_init();

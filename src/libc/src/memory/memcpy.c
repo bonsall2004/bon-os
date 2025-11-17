@@ -1,11 +1,14 @@
-//
-// Created by bonsall2004 on 16/11/2025.
-//
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/libc/src/memory/memcpy.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 #include <string.h>
 
 void *memcpy(void *restrict dest, const void *restrict src, size_t n) {
-  uint8_t *restrict pdest = (uint8_t *restrict)dest;
-  const uint8_t *restrict psrc = (const uint8_t *restrict)src;
+  uint8_t *restrict pdest = (uint8_t *restrict) dest;
+  const uint8_t *restrict psrc = (const uint8_t *restrict) src;
 
   for (size_t i = 0; i < n; i++) {
     pdest[i] = psrc[i];

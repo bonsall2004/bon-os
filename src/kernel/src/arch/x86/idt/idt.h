@@ -1,3 +1,10 @@
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/kernel/src/arch/x86/idt/idt.h
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
+
 #pragma once
 
 #include <stdint.h>
@@ -7,8 +14,10 @@ extern "C" {
 #endif
 
 #define IDT_ENTRIES 256
+#define KERNEL_CS 0x08
+#define DOUBLE_FAULT_IST 1
 
-struct registers_t {
+struct regs_state {
   uint64_t rax;
   uint64_t rbx;
   uint64_t rcx;
@@ -31,11 +40,8 @@ struct registers_t {
   uint64_t ss;
 };
 
-typedef void (*idt_handler_t)(uint64_t vec, uint64_t err, struct registers_t *regs);
 
-void isr_common(uint64_t vec, uint64_t err, uint64_t *sp);
-
-void idt_register_handler(uint8_t vec, idt_handler_t handler);
+void register_interrupt_handler(int vector, void (*handler)(struct regs_state *, uint64_t vector, uint64_t err));
 
 void idt_init(void);
 

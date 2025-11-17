@@ -28,7 +28,6 @@ set(C_ARCH_SOURCES
 
 set(ASM_ARCH_SOURCES
         src/arch/x86/gdt/gdt.asm
-        src/arch/x86/idt/isr_stubs.asm
 )
 
 

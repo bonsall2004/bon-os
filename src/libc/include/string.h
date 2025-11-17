@@ -1,6 +1,9 @@
-//
-// Created by bonsall2004 on 16/11/2025.
-//
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/libc/src/string.h
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 
 #pragma once
 #include <stddef.h>
@@ -8,7 +11,6 @@
 
 #ifdef __cplusplus
 extern "C" {
-
 
 
 #endif

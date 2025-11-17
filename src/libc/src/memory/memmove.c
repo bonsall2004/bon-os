@@ -1,11 +1,14 @@
-//
-// Created by bonsall2004 on 16/11/2025.
-//
+/*******************************************************************************
+ * Project: BonOS
+ * File: src/libc/src/memory/memmove.c
+ * Author: Bonsall2004
+ * Copyright © 2025 - 2025
+ ******************************************************************************/
 #include <string.h>
 
 void *memmove(void *dest, const void *src, size_t n) {
-  uint8_t *pdest = (uint8_t *)dest;
-  const uint8_t *psrc = (const uint8_t *)src;
+  uint8_t *pdest = (uint8_t *) dest;
+  const uint8_t *psrc = (const uint8_t *) src;
 
   if (src > dest) {
     for (size_t i = 0; i < n; i++) {
@@ -13,7 +16,7 @@ void *memmove(void *dest, const void *src, size_t n) {
     }
   } else if (src < dest) {
     for (size_t i = n; i > 0; i--) {
-      pdest[i-1] = psrc[i-1];
+      pdest[i - 1] = psrc[i - 1];
     }
   }
 
